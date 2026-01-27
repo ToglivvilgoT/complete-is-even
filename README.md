@@ -1,4 +1,4 @@
-# Is Even: Complete
+# Complete Is Even
 A Python Module that answers the question that few programmers and mathematicians dares to even approach: Is it even? 
 
 ## Content
