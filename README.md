@@ -28,7 +28,7 @@ Determines if a number, either real or complex, is even.
 ## Usage
 
 ```python
-from even_or_odd import real_is_even, complex_is_even, general_is_even
+from init import real_is_even, complex_is_even, general_is_even
 
 # Real numbers
 real_is_even(2)           # True
