@@ -1,6 +1,25 @@
 import re
 
 
+def int_is_even(integer: int) -> bool:
+    """
+    Determine if an integer is even.
+    
+    Args:
+        integer (int): The integer to check.
+        
+    Returns:
+        bool: True if the integer is even, False otherwise.
+        
+    Raises:
+        TypeError: If the integer is not an int.
+    """
+    if type(integer) is not int:
+        raise TypeError("The number is not an int.")
+    
+    return integer % 2 == 0
+
+
 def real_is_even(rational_number: float) -> bool:
     """
     Determine if a rational number is even.
@@ -64,7 +83,9 @@ def general_is_even(number: int | float | complex) -> bool:
     Raises:
         ValueError: If the number is neither real nor complex.
     """
-    if type(number) in [int, float]:
+    if type(number) is int:
+        return int_is_even(number)
+    elif type(number) is float:
         return real_is_even(number)
     elif type(number) is complex:
         return complex_is_even(number)

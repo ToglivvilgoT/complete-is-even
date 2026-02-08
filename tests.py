@@ -3,7 +3,25 @@
 import math
 import unittest
 
-from init import complex_is_even, real_is_even, general_is_even
+from init import int_is_even, complex_is_even, real_is_even, general_is_even
+
+
+class TestIntIsEven(unittest.TestCase):
+    """Tests for the int_is_even() function."""
+
+    def test_even_integers(self) -> None:
+        """Test that even integers are correctly identified."""
+        self.assertTrue(int_is_even(2))
+        self.assertTrue(int_is_even(0))
+
+    def test_odd_integers(self) -> None:
+        """Test that odd integers are correctly identified."""
+        self.assertFalse(int_is_even(3))
+
+    def test_invalid_input_raises_error(self) -> None:
+        """Test that non-integer types raise TypeError."""
+        with self.assertRaises(TypeError):
+            int_is_even("not a number")
 
 
 class TestRealIsEven(unittest.TestCase):

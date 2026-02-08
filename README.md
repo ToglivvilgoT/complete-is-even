@@ -3,6 +3,14 @@ A Python Module that answers the question that few programmers and mathematician
 
 ## Content
 
+### `int_is_even(integer: int) -> bool`
+Determines if an integer is even.
+
+**Features:**
+- Works with integers
+- Supports negative numbers too.
+- Validates that your input is actually an integer (no floating point numbers here!)
+
 ### `real_is_even(number: float) -> bool`
 Determines if a real number is even. Supports integers, floats, and mathematical constants.
 
@@ -20,7 +28,7 @@ Determines if a complex number is even. A complex number is considered even if b
 - Validates that you actually input a complex number
 
 ### `general_is_even(number: int|float|complex) -> bool`
-Determines if a number, either real or complex, is even.
+Determines if a number, either integer, real or complex, is even.
 
 **Features:**
 - Supports all currently known numbers, both real and unreal!
@@ -28,7 +36,12 @@ Determines if a number, either real or complex, is even.
 ## Usage
 
 ```python
-from init import real_is_even, complex_is_even, general_is_even
+from init import int_is_even, real_is_even, complex_is_even, general_is_even
+
+# Integers
+int_is_even(2)            # True  
+int_is_even(-3)           # False
+int_is_even(0)            # True
 
 # Real numbers
 real_is_even(2)           # True
@@ -41,6 +54,7 @@ complex_is_even(3+3j)     # True (both parts odd)
 complex_is_even(2+3j)     # False (mixed parity)
 
 # General numbers
+general_is_even(7)        # False
 general_is_even(2+2j)     # True
 general_is_even(3.7)      # False
 ```
