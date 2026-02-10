@@ -28,7 +28,7 @@ Determines if a complex number is even. A complex number is considered even if b
 - Validates that you actually input a complex number
 
 ### `general_is_even(number: int|float|complex) -> bool`
-Determines if a number, either integer, real or complex, is even.
+Determines if a number, either integer, real, or complex, is even.
 
 **Features:**
 - Supports all currently known numbers, both real and unreal!
